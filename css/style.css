@@ -10,7 +10,7 @@ body {
   header {
     background-color: #007bff; /* Blue */
     color: white;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     font-weight: bold;
   }
@@ -39,17 +39,44 @@ body {
   }
   
   section {
-    padding: 40px;
-    margin: 20px;
-  }
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
   
-  footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-weight: bold;
+  
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: -10px;
+  position: fixed;
+  width: 100%;
+  bottom: -2%;
+}
+
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+  header, footer {
+      padding: -15px;
   }
+
+  nav ul li {
+      display: block;
+      text-align: center;
+      margin: 5px 0;
+  }
+
+  section {
+      padding: 10px;
+      margin: 10px;
+  }
+}
