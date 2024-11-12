@@ -20,3 +20,42 @@ showDetailsButtons.forEach(button => {
 
 
 
+
+const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let isValid = true;
+
+    // Validate name
+    if (nameInput.value.trim() === '') {
+        isValid = false;
+        // Display error message for name
+    }
+
+    // Validate email
+    if (!isValidEmail(emailInput.value)) {
+        isValid = false;
+        // Display error message for email
+    }
+
+    // Validate message
+    if (messageInput.value.trim() === '') {
+        isValid = false;
+        // Display error message for message
+    }
+
+    if (isValid) {
+        // Submit the form 
+    }
+});
+
+function isValidEmail(email) {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
