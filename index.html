@@ -21,67 +21,85 @@
         </nav>
     </header>
 
+    <a href="https://github.com/KerlanHumber?tab=repositories" target="_blank">
+        <button type="gitLink">GitHub Repository</button>
+        </a>
+
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>My name is Kerlan Augustine. I'm age 23 and am currently going to Humber College for Computer Programming.</p>
+        <h2 id>About Me</h2>
+        <span id="typed"></span> <p id="aboutP">My name is Kerlan Augustine. I'm age 23 and am currently going to Humber College for Computer Programming.</p>
     <p>My hobbies include gaming and drawing. As for my goals for this course, and this program as a whole, I wish to learn more about what goes into these technologies and systems, as well as relearn coding techniques that I've learned in the past. From there, I wish to pursue a career in Cybersecurity and Web development.</p>
     <p>That's all for now. Thank you for taking a look at my pages. I'll be sure to update the site as I gain more knowledge. Take care!</p>
-   </p>
+   </p></span>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2 id>My Projects</h2>
+        
+        <div id="allProjects"></div>
         <div class="project">
-            <h2>Project 1</h2>
+            <p class="projectTitle">Project 1: Dynamic Blog Site</p>
+            <img class="projectImg" src="project1.png" alt="Image of the dynamic blog site">
             <button class="show-details">Show Details</button>
-            <div class="details">
+            <div class="details" style="display: none">
+                <p>A dynamic blog website I created that incorporates localStorage to store a saved blog title and content on one page, 
+                    and retrieve the data to display it on another page. Has edit and delete functions. 
+                    This project was designed to practice version control using git.
+
+                    <a href="https://kerlanhumber.github.io/dynamic-blog-website/" target="_blank">Link to this project</a></p>
+
+                </div>
+        </div>
+    
+        <div id="allProjects"></div>
+        <div class="project">
+            <p class="projectTitle">Project 2: Web Storage API</p>
+            <img class="projectImg" src="project2.png" alt="Image of the dynamic blog site">
+            <button class="show-details">Show Details</button>
+            <div class="details" style="display: none">
+                <p>I developed this website as an assignment for my web development class. It uses the HTML5 Web Storage API to save a user's name or username. 
+                    This project is a placeholder for a future project that may be more appealing.
+                    
+                <a href="https://kerlanhumber.github.io/storage-assignment/" target="_blank">Link to this project</a> </p>
                 </div>
         </div>
     
     
-        <div class="project">
-            <h2>Project 2</h2>
-            <button class="show-details">Show Details</button>
-            <div class="details">
-                </div>
-        </div>
-    
-    
-        <div class="project">
-            <h2>Project 3</h2>
-            <button class="show-details">Show Details</button>
-            <div class="details">
-                </div>
-        </div>
+        
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="myForm">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <span class="error-message" id="nameError"></span>
-            </div>
-        
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error-message" id="emailError"></span>
-            </div>
-        
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <span class="error-message" id="messageError"></span>
-            </div>   
+        <h2 id="contactH2">Contact Me</h2>
+        <div id="formDiv">
+        <form id="contactFormID" action="#" method="POST">
+        <p id="formTitle">Contact Me Directly!</p>
         
         
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+        <label for="Name">Name:</label><br>
+        <input type="text" id="nameInput" name="name" required><br><br>
+        <span class="error" id="nameError"></span><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="emailInput" name="email" required><br><br>
+        <span class="error" id="emailError"></span><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phoneInput" name="phone" minlength="7"><br><br>
+        <span class="error" id="phoneError"></span><br>
+
+        <label for="message">Message Me:</label><br>
+        <textarea form="contactFormID" id="messageInput" name="message" placeholder="Enter your message here" minlength="20"></textarea><br><br>
+        <span class="error" id="messageError"></span><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="successMessage" class="success"></p>
+</div>
+
+</section><br><br><br>
 
     <!-- Footer Section -->
     <footer>
